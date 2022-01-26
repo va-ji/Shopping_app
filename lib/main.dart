@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => Products()),
         ChangeNotifierProvider(create: (context) => Cart()),
+        ChangeNotifierProvider(create: (contect) => Orders()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -31,6 +32,8 @@ class MyApp extends StatelessWidget {
         routes: {
           ProductDetailScreen.route: (context) => const ProductDetailScreen(),
           CartScreen.route: (context) => const CartScreen(),
+          OrdersScreen.route: (context) => const OrdersScreen(),
+          UserProductsScreen.route: (context) => const UserProductsScreen(),
         },
       ),
     );
